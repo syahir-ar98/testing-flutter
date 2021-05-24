@@ -6,7 +6,7 @@ cors = CORS(app)
 
 @app.route('/', methods = ['GET'])
 def runApp():
-    return 'Hello World'
+    return jsonify({'greetings' : 'hello world'})
 
 if __name__ == "__main__":
     app.run(host='127.0.0.1')
