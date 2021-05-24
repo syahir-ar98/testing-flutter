@@ -32,12 +32,25 @@ allowSelfSignedHttps(True) # this line is needed if you use self-signed certific
 app = Flask(__name__)
 cors = CORS(app)
 
+input6 = "2"
+input7 = "3"
+
 @app.route('/', methods = ['GET'])
 
 # // Request data goes here
 def requestModel():
 
-    if(request.method == "GET"):
+    global input6
+    global input7
+
+    if(request.method == "POST"):
+        request_data = request.data
+        request_data = json.loads(request_data.decode('utf-8'))
+        input1 = request_data['input6']
+        input2 = request_data['input7']
+        return "Hello World!"
+        
+    elif(request.method == "GET"):
         data = {
             "Inputs": {
                 "WebServiceInput0":
@@ -48,8 +61,8 @@ def requestModel():
                         'Quiz 1_Q3 Score': "false",
                         'Quiz 1_Q4 Score': "true",
                         'Quiz 1_Q5 Score': "true",
-                        'Quiz 1_Q1 Time': "0",
-                        'Quiz 1_Q2 Time': "1",
+                        'Quiz 1_Q1 Time': input6,
+                        'Quiz 1_Q2 Time': input7,
                         'Quiz 1_Q3 Time': "2",
                         'Quiz 1_Q4 Time': "1",
                         'Quiz 1_Q5 Time': "2",
