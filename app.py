@@ -19,11 +19,11 @@ allowSelfSignedHttps(True)
 app = Flask(__name__)
 cors = CORS(app)
 
-input1 = "true"
-input2 = "true"
-input3 = "true"
-input4 = "true"
-input5 = "true"
+input1 = "1"
+input2 = "1"
+input3 = "1"
+input4 = "1"
+input5 = "1"
 input6 = "0"
 input7 = "0"
 input8 = "0"
@@ -85,9 +85,9 @@ def requestModel():
 
         body = str.encode(json.dumps(data))
 
-        url = 'http://20.195.98.200:80/api/v1/service/model-decisiontree/score'
+        url = 'http://20.195.98.200:80/api/v1/service/model-deployed-02/score'
         # Replace this with the API key for the web service
-        api_key = 'fiUUUwL28J9AxzAbxB8gLmg3n4bcGEkJ'
+        api_key = 'UcLXwcRMlDjq1g36ZNrGeG3YJ01wWuFM'
         headers = {'Content-Type': 'application/json',
                    'Authorization': ('Bearer ' + api_key)}
 
@@ -113,6 +113,3 @@ def requestModel():
 
 if __name__ == "__main__":
     app.run(debug=True, host='127.0.0.1', port=8000)
-
-
-
