@@ -67,14 +67,14 @@ def requestModel():
                 [
                     {
                         'Quiz 1_Q1 Score': input1,
-                        'Quiz 1_Q2 Score': input2,
-                        'Quiz 1_Q3 Score': input3,
-                        'Quiz 1_Q4 Score': input4,
-                        'Quiz 1_Q5 Score': input5,
                         'Quiz 1_Q1 Time': input6,
+                        'Quiz 1_Q2 Score': input2,
                         'Quiz 1_Q2 Time': input7,
+                        'Quiz 1_Q3 Score': input3,
                         'Quiz 1_Q3 Time': input8,
+                        'Quiz 1_Q4 Score': input4,
                         'Quiz 1_Q4 Time': input9,
+                        'Quiz 1_Q5 Score': input5,
                         'Quiz 1_Q5 Time': input10,
                     },
                 ],
